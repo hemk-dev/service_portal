@@ -44,7 +44,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <GsapAnimation animation="fadeInLeft">
-                <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground leading-loose">
+                <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground sm:leading-[1.2] md:leading-[1.1] leading-[1.5]">
                   Automate Your Service Requests & Focus On What Matters
                 </h1>
               </GsapAnimation>
