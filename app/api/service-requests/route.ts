@@ -2,7 +2,11 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { FormValues, ServiceRequest } from '@/types';
 
-const N8N_WEBHOOK_URL = 'http://localhost:5678/webhook/d8bdfb91-b5e9-4ee1-8b3c-4d917778beae';
+if (!process.env.N8N_WEBHOOK_URL) {
+  throw new Error('N8N_WEBHOOK_URL environment variable is not set');
+}
+
+const N8N_WEBHOOK_URL = process.env.N8N_WEBHOOK_URL;
 
 // Add OPTIONS handler for CORS preflight requests
 export async function OPTIONS() {
